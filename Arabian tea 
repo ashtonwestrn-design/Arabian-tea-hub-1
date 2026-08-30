@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAHRA TEA HOUSE</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0b0906;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(11,9,6,.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.logo span{
+    color:#d6a84f;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#d6a84f;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:120px 7% 70px;
+    background:
+    radial-gradient(circle at 80% 30%,rgba(214,168,79,.18),transparent 35%),
+    radial-gradient(circle at 20% 80%,rgba(128,73,25,.15),transparent 35%);
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.tag{
+    color:#d6a84f;
+    letter-spacing:4px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(50px,9vw,100px);
+    line-height:.95;
+    margin-bottom:25px;
+}
+
+h1 span{
+    color:#d6a84f;
+}
+
+.hero p{
+    color:#bbb;
+    max-width:550px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    border-radius:30px;
+    background:#d6a84f;
+    color:#0b0906;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 30px rgba(214,168,79,.25);
+}
+
+section{
+    padding:100px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title small{
+    color:#d6a84f;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-size:45px;
+    margin-top:10px;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:linear-gradient(145deg,#18130d,#0f0d09);
+    border:1px solid rgba(214,168,79,.15);
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#d6a84f;
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#999;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.price{
+    display:block;
+    color:#d6a84f;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-box{
+    background:#15110c;
+    padding:40px;
+    border-radius:25px;
+    border:1px solid rgba(214,168,79,.15);
+}
+
+.about h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.about p{
+    color:#aaa;
+    line-height:1.8;
+}
+
+.features{
+    margin-top:30px;
+    display:grid;
+    gap:15px;
+}
+
+.feature{
+    padding:15px;
+    background:#0d0b08;
+    border-radius:12px;
+}
+
+.contact{
+    text-align:center;
+    background:
+    radial-gradient(circle,rgba(214,168,79,.12),transparent 55%);
+}
+
+.contact h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    color:#aaa;
+    margin-bottom:30px;
+}
+
+.info{
+    margin-top:30px;
+    color:#aaa;
+    line-height:2;
+}
+
+footer{
+    padding:30px 7%;
+    text-align:center;
+    color:#777;
+    border-top:1px solid rgba(255,255,255,.08);
+    font-size:13px;
+}
+
+@media(max-width:700px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        padding-top:150px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .about h2{
+        font-size:36px;
+    }
+
+    .section-title h2{
+        font-size:36px;
+    }
+
+    .contact h2{
+        font-size:38px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SAHRA<span>TEA</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="tag">ARABIAN TEA • WELLNESS • CULTURE</div>
+
+        <h1>
+            Taste the<br>
+            <span>Arabian</span> Soul.
+        </h1>
+
+        <p>
+            Welcome to Sahra Tea House — a modern Arabian tea experience
+            blending traditional flavours, premium ingredients and a
+            futuristic atmosphere.
+        </p>
+
+        <a href="#menu" class="btn">Explore Our Tea</a>
+
+    </div>
+
+</section>
+
+
+<section id="menu">
+
+    <div class="section-title">
+        <small>OUR COLLECTION</small>
+        <h2>Signature Teas</h2>
+    </div>
+
+    <div class="menu">
+
+        <div class="card">
+            <div class="icon">🍵</div>
+            <h3>Royal Mint Tea</h3>
+            <p>
+                Fresh green tea infused with aromatic Moroccan mint.
+            </p>
+            <span class="price">₦3,500</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌹</div>
+            <h3>Rose Arabian Tea</h3>
+            <p>
+                Fragrant black tea blended with delicate rose petals.
+            </p>
+            <span class="price">₦4,000</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">✨</div>
+            <h3>Golden Saffron</h3>
+            <p>
+                Premium tea infused with saffron, cardamom and honey.
+            </p>
+            <span class="price">₦5,500</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌿</div>
+            <h3>Desert Wellness</h3>
+            <p>
+                A refreshing herbal blend designed for a relaxing evening.
+            </p>
+            <span class="price">₦4,500</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="about">
+
+    <div class="about">
+
+        <div class="about-box">
+
+            <div class="tag">OUR STORY</div>
+
+            <h2>Tradition meets tomorrow.</h2>
+
+            <p>
+                Sahra Tea House brings the atmosphere of an Arabian tea
+                lounge into a modern Nigerian setting. Every cup is crafted
+                to create a relaxing experience inspired by Middle Eastern
+                tea culture.
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+                    🫖 Premium Tea Blends
+                </div>
+
+                <div class="feature">
+                    🌿 Natural Ingredients
+                </div>
+
+                <div class="feature">
+                    🏜️ Arabian-inspired Experience
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="about-box">
+
+            <div class="tag">WHY SAHRA?</div>
+
+            <h2>More than tea.</h2>
+
+            <p>
+                Come for the tea. Stay for the atmosphere.
+                Whether you're meeting friends, relaxing after school,
+                or simply discovering new flavours, Sahra is your escape
+                from the ordinary.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <div class="tag">VISIT US</div>
+
+    <h2>Your next cup awaits.</h2>
+
+    <p>
+        Step into a different kind of tea experience.
+    </p>
+
+    <a class="btn" href="tel:+2348000000000">
+        Call Us
+    </a>
+
+    <div class="info">
+        📍 Abuja, Nigeria<br>
+        📞 +234 800 000 0000<br>
+        ✉️ hello@sahratea.com
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 Sahra Tea House. Demo website created for portfolio purposes.
+</footer>
+
+</body>
+</html>
